@@ -57,6 +57,7 @@ class TempometerGaugeCard extends HTMLElement {
         --base-unit: ${cardConfig.scale};
         height: calc(var(--base-unit)*3.5);
         position: relative;
+	background: transparent;
       }
       .container{
         width: calc(var(--base-unit) * 4);
@@ -80,7 +81,7 @@ class TempometerGaugeCard extends HTMLElement {
       .gauge-b{
         z-index: 3;
         position: absolute;
-        background-color: var(--card-background-color);
+        background-color: var(--primary-background-color);
         width: calc(var(--base-unit) * 3.6);
         height: calc(var(--base-unit) * 2);
         top: calc(var(--base-unit) * 0.2);
@@ -128,25 +129,26 @@ class TempometerGaugeCard extends HTMLElement {
             padding-top: calc(var(--base-unit)*0.15);
         }
       .icon1{
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
             color: ${icon_color};
             float: left;
-            padding-top: 3em;
+            padding-top: 8em;
+	    margin-left: -2em;
         }
       .icon2{
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
             color: ${icon_color};
             padding-top: .5em;
-            padding-right: 9px;
         }
       .icon3{
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
             color: ${icon_color};
             float: right;
-            padding-top: 3em;
+            padding-top: 8em;
+    	    margin-right: -2em;
         }
       .gauge-footer{
             position: absolute;
@@ -157,7 +159,7 @@ class TempometerGaugeCard extends HTMLElement {
             font-size: calc(var(--base-unit) * 0.30);
             font-weight: 400;
             padding-top: .25em;
-            background: var(--card-background-color);
+            background: var(--primary-background-color);
         }
       .gauge-footer .minval{
             float: left;
