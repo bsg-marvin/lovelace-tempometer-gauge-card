@@ -41,12 +41,6 @@ class TempometerGaugeCard extends HTMLElement {
       if (entityMaxParts.attribute) cardConfig.maxAttribute = entityMaxParts.attribute;
     }
 	  
-    if (icon2 !== 'mdi:battery-50') {
-      	var icon_color = 'yellow'
-    } else {
-      	var icon_color = "var(--paper-item-icon-color)";
-    }
-	  
     if (config.icon_color !== undefined) {
         var icon_color = config.icon_color;	
     } else {
