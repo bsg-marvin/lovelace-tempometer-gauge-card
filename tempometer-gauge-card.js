@@ -139,7 +139,7 @@ class TempometerGaugeCard extends HTMLElement {
       .icon2{
             width: 20px;
             height: 20px;
-            color: ${icon_color};
+            color: yellow;
             padding-top: .5em;
         }
       .icon3{
