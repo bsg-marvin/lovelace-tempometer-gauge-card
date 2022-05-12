@@ -8,10 +8,10 @@ class TempometerGaugeCard extends HTMLElement {
     if (!config.entity) {
       throw new Error('Please define an entity');
     }
-	if (config.max === null) {
+	if (config.max == null) {
 		throw new Error('Please define the max config option');
 	}
-	if (config.min === null) {
+	if (config.min == null) {
 		throw new Error('Please define the min config option');
 	}
 
@@ -57,7 +57,6 @@ class TempometerGaugeCard extends HTMLElement {
         --base-unit: ${cardConfig.scale};
         height: calc(var(--base-unit)*3.5);
         position: relative;
-        background: transparent;
       }
       .container{
         width: calc(var(--base-unit) * 4);
@@ -68,12 +67,11 @@ class TempometerGaugeCard extends HTMLElement {
         overflow: hidden;
         text-align: center;
         transform: translate(-50%, -50%);
-        background: transparent;
       }
       .gauge-a{
         z-index: 1;
         position: absolute;
-        background: transparent;
+        background-color: var(--secondary-background-color);
         width: calc(var(--base-unit) * 4);
         height: calc(var(--base-unit) * 2);
         top: 0%;
@@ -82,7 +80,7 @@ class TempometerGaugeCard extends HTMLElement {
       .gauge-b{
         z-index: 3;
         position: absolute;
-        background: transparent;
+        background-color: var(--card-background-color);
         width: calc(var(--base-unit) * 3.6);
         height: calc(var(--base-unit) * 2);
         top: calc(var(--base-unit) * 0.2);
@@ -93,7 +91,7 @@ class TempometerGaugeCard extends HTMLElement {
       .gauge-c{
         z-index: 2;
         position: absolute;
-        background: transparent;
+        background-color: var(--label-badge-yellow);
         width: calc(var(--base-unit) * 4);
         height: calc(var(--base-unit) * 2);
         top: calc(var(--base-unit) * 2);
@@ -130,15 +128,15 @@ class TempometerGaugeCard extends HTMLElement {
             padding-top: calc(var(--base-unit)*0.15);
         }
       .icon1{
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             color: ${icon_color};
             float: left;
-            padding-top: 6em;
+            padding-top: 3em;
         }
       .icon2{
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             color: ${icon_color};
             padding-top: .5em;
             padding-right: 9px;
@@ -148,7 +146,7 @@ class TempometerGaugeCard extends HTMLElement {
             height: 18px;
             color: ${icon_color};
             float: right;
-            padding-top: 6em;
+            padding-top: 3em;
         }
       .gauge-footer{
             position: absolute;
@@ -363,7 +361,7 @@ class TempometerGaugeCard extends HTMLElement {
     }
 
     let measurement = "";
-    if (config.measurement === null) {
+    if (config.measurement == null) {
       if (hass.states[config.entity].attributes.unit_of_measurement === undefined) {
         measurement = '';
       } else {
