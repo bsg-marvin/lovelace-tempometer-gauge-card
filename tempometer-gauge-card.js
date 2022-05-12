@@ -40,12 +40,6 @@ class TempometerGaugeCard extends HTMLElement {
       cardConfig.entity_max = entityMaxParts.entity;
       if (entityMaxParts.attribute) cardConfig.maxAttribute = entityMaxParts.attribute;
     }
-	  
-    if (config.icon_color !== undefined) {
-        var icon_color = config.icon_color;	
-    } else {
-        var icon_color = "var(--paper-item-icon-color)";
-    }
 	    
     let card_style = cardConfig.card_style;
     const card = document.createElement('ha-card');
@@ -131,7 +125,7 @@ class TempometerGaugeCard extends HTMLElement {
       .icon1{
             width: 20px;
             height: 20px;
-            color: "#d90202";
+            color: #d90202;
             float: left;
             padding-top: 8em;
 	    margin-left: -2em;
@@ -139,13 +133,13 @@ class TempometerGaugeCard extends HTMLElement {
       .icon2{
             width: 20px;
             height: 20px;
-            color: "#d9d202";
+            color: #d9d202;
             padding-top: .5em;
         }
       .icon3{
             width: 20px;
             height: 20px;
-            color: "#0a8501";
+            color: #0a8501;
             float: right;
             padding-top: 8em;
     	    margin-right: -2em;
