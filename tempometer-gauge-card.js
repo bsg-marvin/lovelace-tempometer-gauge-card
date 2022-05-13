@@ -106,7 +106,7 @@ class TempometerGaugeCard extends HTMLElement {
         top: calc(var(--base-unit) * 1.25);
         margin-left: auto;
         margin-right: auto;
-        transition: all 1s ease-out;
+
       }
       .gauge-data #percent{
         font-size: calc(var(--base-unit) * 0.55);
