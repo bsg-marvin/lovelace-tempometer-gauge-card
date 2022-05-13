@@ -125,7 +125,7 @@ class TempometerGaugeCard extends HTMLElement {
       .icon1{
             width: 20px;
             height: 20px;
-            color: #d90202;
+            color: #ebebeb;
             float: left;
             padding-top: 8em;
 	    margin-left: -2em;
@@ -133,13 +133,13 @@ class TempometerGaugeCard extends HTMLElement {
       .icon2{
             width: 20px;
             height: 20px;
-            color: #d9d202;
+            color: #ebebeb;
             padding-top: .5em;
         }
       .icon3{
             width: 20px;
             height: 20px;
-            color: #0a8501;
+            color: #ebebeb;
             float: right;
             padding-top: 8em;
     	    margin-right: -2em;
